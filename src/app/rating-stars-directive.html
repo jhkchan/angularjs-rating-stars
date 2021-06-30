@@ -16,7 +16,7 @@
     ng-mouseleave="ctrl.setMouseOverRating(ctrl.rating)"
     ng-click="ctrl.setRating($index + 1)"
     ng-repeat="item in ctrl.starsArray" >
-    <div ng-show="item.showNumber">{{$index + 1}}</div>
+    <div ng-show="ctrl.showNumber">{{$index + 1}}</div>
     <i class="material-icons">{{item.icon}}</i>
   </a>
 
