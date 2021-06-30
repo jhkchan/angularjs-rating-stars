@@ -24,16 +24,16 @@
 			controller: 'RatingStarsController',
 			controllerAs: 'ctrl',
 			bindToController: {
-				maxRating: '@?',
+				maxRating: '<?',
 				rating: '=?',
-				readOnly: '=?',
+				readOnly: '<?',
 				onRating: '&',
-				resetAllowed : '=?',
-                shadow: '=?',
-                showNumber: '=?',
-                icon: '@?',
-                offIcon: '@?',
-				offColor: '=?'
+				resetAllowed : '<?',
+                shadow: '<?',
+                showNumber: '<?',
+                icon: '<?',
+                offIcon: '<?',
+				offColor: '<?'
 			},
 			link: link
 		};
