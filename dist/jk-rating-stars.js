@@ -23,6 +23,9 @@
         if(that.shadow === undefined){
             that.shadow = true;
         }
+        if(that.showNumber === undefined){
+            that.showNumber = false;
+        }
         if(that.icon === undefined){
             that.icon = 'star';
         }
@@ -130,6 +133,7 @@
 				onRating: '&',
 				resetAllowed : '=?',
                 shadow: '=?',
+                showNumber: '=?',
                 icon: '@?',
                 offIcon: '@?',
 				offColor: '=?'
@@ -146,4 +150,4 @@
 
 }());
 
-(function(){'use strict';angular.module('jkAngularRatingStars.templates', []).run(['$templateCache', function($templateCache) {$templateCache.put('/rating-stars-directive.html','<div\n  class="jk-rating-stars-container"\n  layout="row" >\n\n  <a\n    class="button"\n    ng-click="ctrl.setRating(0)"\n    ng-if="!ctrl.readOnly && ctrl.resetAllowed" >\n    <i class="material-icons">remove_circle_outline</i>\n  </a>\n\n  <a\n    class="button"\n    ng-class="[item.class, item.shadow]"\n    ng-mouseover="ctrl.setMouseOverRating($index + 1)"\n    ng-mouseleave="ctrl.setMouseOverRating(ctrl.rating)"\n    ng-click="ctrl.setRating($index + 1)"\n    ng-repeat="item in ctrl.starsArray" >\n    <i class="material-icons">{{item.icon}}</i>\n  </a>\n\n</div>\n');}]);})();
+(function(){'use strict';angular.module('jkAngularRatingStars.templates', []).run(['$templateCache', function($templateCache) {$templateCache.put('/rating-stars-directive.html','<div\n  class="jk-rating-stars-container"\n  layout="row" >\n\n  <a\n    class="button"\n    ng-click="ctrl.setRating(0)"\n    ng-if="!ctrl.readOnly && ctrl.resetAllowed" >\n    <i class="material-icons">remove_circle_outline</i>\n  </a>\n\n  <a\n    class="button"\n    ng-class="[item.class, item.shadow]"\n    ng-mouseover="ctrl.setMouseOverRating($index + 1)"\n    ng-mouseleave="ctrl.setMouseOverRating(ctrl.rating)"\n    ng-click="ctrl.setRating($index + 1)"\n    ng-repeat="item in ctrl.starsArray" >\n    <div ng-show="item.showNumber">{{$index + 1}}</div>\n    <i class="material-icons">{{item.icon}}</i>\n  </a>\n\n</div>\n');}]);})();

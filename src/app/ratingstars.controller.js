@@ -15,6 +15,9 @@
         if(that.shadow === undefined){
             that.shadow = true;
         }
+        if(that.showNumber === undefined){
+            that.showNumber = false;
+        }
         if(that.icon === undefined){
             that.icon = 'star';
         }
