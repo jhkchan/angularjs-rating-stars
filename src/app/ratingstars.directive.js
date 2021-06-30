@@ -14,6 +14,12 @@
 			scope.$watch('ctrl.rating', function(oldVal, newVal) {
 				ctrl.validateStars(ctrl.rating);
 			});
+			scope.$watch('ctrl.icon', function(oldVal, newVal) {
+				ctrl.validateStars(ctrl.rating);
+			});
+			scope.$watch('ctrl.offIcon', function(oldVal, newVal) {
+				ctrl.validateStars(ctrl.rating);
+			});
 		}
 
 		return {
