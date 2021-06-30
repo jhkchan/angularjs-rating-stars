@@ -25,18 +25,18 @@
       .pipe(size());
   });
 
-  gulp.task('assets-sass-prod', ['assets-sass-dev'], function() {
+  gulp.task('assets-sass-prod', gulp.series('assets-sass-dev', function() {
     return gulp.src(['.tmp/jk-rating-stars.css'])
       .pipe(csso())
       .pipe(concat('jk-rating-stars.min.css'))
       .pipe(gulp.dest('.tmp'))
       .pipe(size());
-  });
+  }));
 
-  gulp.task('assets-styles', ['assets-sass-prod'], function() {
+  gulp.task('assets-styles', gulp.series('assets-sass-prod', function() {
     return gulp.src(['.tmp/*.css'])
       .pipe(gulp.dest('dist'))
       .pipe(size());
-  });
+  }));
 
 })();

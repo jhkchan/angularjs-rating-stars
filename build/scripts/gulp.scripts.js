@@ -19,7 +19,7 @@
       .on('error', handleError);
   });
 
-  gulp.task('js', ['lint'], function() {
+  gulp.task('js', gulp.series('lint', function() {
     var files = [];
 
     files.push('src/app/**/*.module.js');
@@ -28,6 +28,6 @@
     return gulp.src(files)
       .pipe(concat('scripts.js'))
       .pipe(gulp.dest('.tmp'));
-  });
+  }));
 
 })();

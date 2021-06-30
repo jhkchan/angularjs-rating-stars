@@ -2,7 +2,7 @@
   'use strict';
 
   var gulp = require('gulp'),
-    runSequence = require('run-sequence');
+    runSequence = require('gulp4-run-sequence');
 
   gulp.task('pre-build-tasks', function(done) {
     runSequence(
@@ -12,7 +12,7 @@
     );
   });
 
-  gulp.task('build', function(done) {
+  gulp.task('build', async function(done) {
     runSequence(
       'pre-build-tasks',
       'assets', //compile sass files.

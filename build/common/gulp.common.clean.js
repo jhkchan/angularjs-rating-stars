@@ -11,11 +11,11 @@
     });
   });
 
-  gulp.task('clean', ['clean-tmp'], function(callback) {
+  gulp.task('clean', gulp.series('clean-tmp', function(callback) {
     del(['dist']).then(function() {
       callback();
     });
-  });
+  }));
 
   gulp.task('clean-cache', function(callback) {
     return cache.clearAll(callback);

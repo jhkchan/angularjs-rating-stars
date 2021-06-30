@@ -15,6 +15,9 @@
         if(that.shadow === undefined){
             that.shadow = true;
         }
+        if(that.icon === undefined){
+            that.icon = 'star';
+        }
         if(that.offIcon === undefined){
             that.offIcon = 'star';
         }
@@ -68,7 +71,7 @@
 				var starItem = that.starsArray[index];
 				if (index <= (rating - 1)) {
                     starItem.class = "star-on";
-					starItem.icon = "star";
+					starItem.icon = that.icon;
 				} else {
                     if(that.offColor) starItem.class = "star-off";
 					starItem.icon = that.offIcon;

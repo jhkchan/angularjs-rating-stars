@@ -30,6 +30,7 @@
 				onRating: '&',
 				resetAllowed : '=?',
                 shadow: '=?',
+                icon: '@?',
                 offIcon: '@?',
 				offColor: '=?'
 			},
