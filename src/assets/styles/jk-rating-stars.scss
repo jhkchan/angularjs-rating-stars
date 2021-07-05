@@ -17,9 +17,13 @@
     &.star-off {
 
       .material-icons {
-        color: #5d5d5d;
+        color: #ddd;
       }
     }
+  }
+
+  .star-button {
+    text-shadow: 0.06em .04em #000000;
   }
 }
 
