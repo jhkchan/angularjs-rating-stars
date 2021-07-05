@@ -5,7 +5,7 @@
   .jk-rating-stars-container .button.star-on .material-icons {
     color: #EE9A00; }
   .jk-rating-stars-container .button.star-off .material-icons {
-    color: #ddd; }
+    color: #5d5d5d; }
 
 .jk-rating-stars-container[read-only="true"] .button {
   cursor: default; }
